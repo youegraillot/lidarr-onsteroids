@@ -26,7 +26,7 @@ RUN mv /deemix-gui/dist/deemix-server /deemix-server
 
 FROM ghcr.io/hotio/lidarr:pr-plugins
 
-LABEL maintainer="youegraillot"
+LABEL maintainer="randrini"
 
 ENV DEEMIX_SINGLE_USER=true
 ENV AUTOCONFIG=true
