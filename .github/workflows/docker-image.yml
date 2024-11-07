@@ -14,5 +14,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Clone lidarr-flac2mp3 at specific commit
+      run: |
+        git clone https://github.com/youegraillot/lidarr-flac2mp3.git lidarr-flac2mp3
+        cd lidarr-flac2mp3
+        git checkout f755bb2c7e2922244f02287edb03d0484e0a5f05
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag latest:$(date +%s)
